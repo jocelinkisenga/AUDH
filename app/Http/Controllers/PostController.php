@@ -21,7 +21,7 @@ class PostController extends Controller
     public function front(){
         $articles = Post::orderBy("created_at","desc")->paginate(10);
 
-        return view("pages.articles",compact("articles"));
+        return view("blog",compact("articles"));
     }
 
     /**
@@ -37,8 +37,9 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request)
     {
-        $imgName = Carbon::now()->timestamp .'patrickngoy.' . $request->file('image')->extension();
-        $path = $request->file("image")->storeAs('uploads',$imgName,'public');
+
+        $imgName = Carbon::now()->timestamp . 'jocelin.' . $request->file('image')->extension();
+        $path = $request->file('image')->storeAs('/storage/uploads', $imgName, 'public');
 
         Post::create([
             "title" => $request->title,

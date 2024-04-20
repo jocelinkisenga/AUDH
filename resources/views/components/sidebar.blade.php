@@ -194,26 +194,13 @@
       <li class="nav-item">
         <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
           <i class="menu-icon mdi mdi-card-text-outline"></i>
-          <span class="menu-title">Coupons</span>
+          <span class="menu-title">Evenements</span>
           <i class="menu-arrow"></i>
         </a>
         <div class="collapse" id="form-elements">
           <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="{{ route("coupon.index") }}">liste des coupons</a></li>
-            <li class="nav-item"><a class="nav-link" href="{{ route("coupon.create") }}">Ajouter un coupon</a></li>
-          </ul>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-bs-toggle="collapse" href="#form-elements" aria-expanded="false" aria-controls="form-elements">
-          <i class="menu-icon mdi mdi-card-text-outline"></i>
-          <span class="menu-title">Astuces</span>
-          <i class="menu-arrow"></i>
-        </a>
-        <div class="collapse" id="form-elements">
-          <ul class="nav flex-column sub-menu">
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">liste des astuces</a></li>
-            <li class="nav-item"><a class="nav-link" href="pages/forms/basic_elements.html">Ajouter un article</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route("event.index") }}">liste des evenrments</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route("event.create") }}">Ajouter un evenement</a></li>
           </ul>
         </div>
       </li>
