@@ -39,11 +39,11 @@
       <div class="collapse navbar-collapse" id="ftco-nav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active"><a href="/" class="nav-link">Acceuil</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">a propos</a></li>
-          <li class="nav-item"><a href="causes.html" class="nav-link">missions</a></li>
+          <li class="nav-item"><a href="{{ route("about.index") }}" class="nav-link">a propos</a></li>
+          <li class="nav-item"><a href="{{ route("missions.index") }}" class="nav-link">missions</a></li>
           <li class="nav-item"><a href="{{ route("posts.front") }}" class="nav-link">Blog</a></li>
-          <li class="nav-item"><a href="event.html" class="nav-link">Evenments</a></li>
-          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+          <li class="nav-item"><a href="{{ route("event.index") }}" class="nav-link">Evenments</a></li>
+          <li class="nav-item"><a href="{{ route("contact.index") }}" class="nav-link">Contact</a></li>
         </ul>
       </div>
     </div>
