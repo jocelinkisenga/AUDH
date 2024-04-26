@@ -9,16 +9,12 @@
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate text-center text-black
           " data-scrollax=" properties: { translateY: '70%' }">
-            <h1 class="mb-4 text-black" data-scrollax="">Doing Nothing is Not An Option of Our Life</h1>
-            <p class="mb-5" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Created by <a href="#">Colorlib.com</a></p>
+            <h2 class="mb-4 text-white font-bold">Action Universelle pour la Défenses des Droits de l'Homme</h2>
 
-            <p data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><a href="https://vimeo.com/45830194" class="btn btn-white btn-outline-white px-4 py-3 popup-vimeo"><span class="icon-play mr-2"></span>Watch Video</a></p>
           </div>
         </div>
       </div>
     </div>
-
-
 
     <section class="ftco-section">
     	<div class="container">
@@ -133,36 +129,42 @@
       </div>
     </section>
 
-    <section class="ftco-gallery">
+    <section class="ftco-gallery m-4">
+              <div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section ftco-animate text-center">
+            <h2 class="mb-4">Notre Galérie</h2>
+            <p></p>
+          </div>
+        </div>
     	<div class="d-md-flex">
-	    	<a href="images/cause-2.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/cause-2.jpg);">
+	    	<a href="{{ asset('audh/image1.jpg') }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({{ asset("audh/image2.jpg") }});">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
 	    	</a>
-	    	<a href="images/cause-3.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/cause-3.jpg);">
+	    	<a href="{{ asset("audh/image3.jpg") }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({{ asset('audh/image3.jpg') }});">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
 	    	</a>
-	    	<a href="images/cause-4.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/cause-4.jpg);">
+	    	<a href="{{ asset("audh/image4.jpg") }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({{ asset("audh/image4.jpg") }});">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
 	    	</a>
-	    	<a href="images/cause-5.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/cause-5.jpg);">
+	    	<a href="{{ asset('audh/image5.jpg') }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({{ asset('audh/image5.jpg') }});">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
 	    	</a>
     	</div>
     	<div class="d-md-flex">
-	    	<a href="images/cause-6.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/cause-6.jpg);">
+	    	<a href="{{ asset('audh/image6.jpg') }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/cause-6.jpg);">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
 	    	</a>
-	    	<a href="images/image_3.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/image_3.jpg);">
+	    	<a href="{{ asset("audh/image7.jpg") }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({{ asset("audh/image7.jpg") }});">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
@@ -172,7 +174,7 @@
 	    			<span class="icon-search"></span>
 	    		</div>
 	    	</a>
-	    	<a href="images/image_2.jpg" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url(images/image_2.jpg);">
+	    	<a href="{{ asset("audh/image8.jpg") }}" class="gallery image-popup d-flex justify-content-center align-items-center img ftco-animate" style="background-image: url({{ asset("audh/image8.jpg") }});">
 	    		<div class="icon d-flex justify-content-center align-items-center">
 	    			<span class="icon-search"></span>
 	    		</div>
@@ -192,16 +194,16 @@
             @foreach ($recentPosts as $item)
             <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/image_1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset("storage/storage/uploads/".$item->image) }}');">
               </a>
               <div class="text p-4 d-block">
               	<div class="meta mb-3">
-                  <div><a href="#">Sept 10, 2018</a></div>
+                  <div><a href="#">{{ \Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</a></div>
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading mt-3"><a href="#">{{ $item->title }}</a></h3>
-                <p>{{ $item->slug }}</p>
+                <h3 class="heading mt-3"><a href="{{ route("posts.show",["id" => $item->id]) }}">{{ \Illuminate\Support\Str::limit($item->title, 30, '...') }}</a></h3>
+                <p>{{ \Illuminate\Support\Str::limit($item->slug, 50, '...')}}</p>
               </div>
             </div>
           </div>
@@ -210,68 +212,38 @@
       </div>
     </section>
 
-    <section class="ftco-section bg-light">
+    {{-- <section class="ftco-section bg-light">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
-            <h2 class="mb-4">Our Latest Events</h2>
+            <h2 class="mb-4">Evenements recents</h2>
           </div>
         </div>
         <div class="row">
-        	<div class="col-md-4 d-flex ftco-animate">
+
+            @foreach ($events as $item)
+                    <div class="col-md-4 d-flex ftco-animate">
           	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-1.jpg');">
+              <a href="blog-single.html" class="block-20" style="background-image: url('{{ asset("storage/storage/uploads/".$item->photo) }}');">
               </a>
               <div class="text p-4 d-block">
               	<div class="meta mb-3">
-                  <div><a href="#">Sep. 10, 2018</a></div>
+                  <div><a href="#">{{ \Carbon\Carbon::parse($item->created_at)->diffForHumans() }}</a></div>
                   <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
+                  <div></div>
                 </div>
-                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
-                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                <h3 class="heading mb-4"><a href="#">{{ $item->title }}</a></h3>
+                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i>{{$item->day_event}}</span> <span><i class="icon-map-o"></i> </span></p>
+
+                <p><a href=""> <i class="ion-ios-arrow-forward"></i></a></p>
               </div>
             </div>
           </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-2.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sep. 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
-                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry align-self-stretch">
-              <a href="blog-single.html" class="block-20" style="background-image: url('images/event-3.jpg');">
-              </a>
-              <div class="text p-4 d-block">
-              	<div class="meta mb-3">
-                  <div><a href="#">Sep. 10, 2018</a></div>
-                  <div><a href="#">Admin</a></div>
-                  <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
-                </div>
-                <h3 class="heading mb-4"><a href="#">World Wide Donation</a></h3>
-                <p class="time-loc"><span class="mr-2"><i class="icon-clock-o"></i> 10:30AM-03:30PM</span> <span><i class="icon-map-o"></i> Venue Main Campus</span></p>
-                <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                <p><a href="event.html">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
-              </div>
-            </div>
-          </div>
+            @endforeach
+
         </div>
       </div>
-    </section>
+    </section> --}}
 
 		<section class="ftco-section-3 img" style="background-image: url(images/bg_3.jpg);">
     	<div class="overlay"></div>
@@ -281,19 +253,19 @@
     			<div class="img img-2 align-self-stretch" style="background-image: url(images/bg_4.jpg);"></div>
     		</div>
     		<div class="col-md-6 volunteer pl-md-5 ftco-animate">
-    			<h3 class="mb-3">Be a volunteer</h3>
+    			<h3 class="mb-3">Devenez un volontaire</h3>
     			<form action="#" class="volunter-form">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Name">
+              <input type="text" class="form-control" placeholder="votre nom">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Your Email">
+              <input type="text" class="form-control" placeholder=" Email">
             </div>
             <div class="form-group">
               <textarea name="" id="" cols="30" rows="3" class="form-control" placeholder="Message"></textarea>
             </div>
             <div class="form-group">
-              <input type="submit" value="Send Message" class="btn btn-white py-3 px-5">
+              <input type="submit" value="envoyer" class="btn btn-white py-3 px-5">
             </div>
           </form>
     		</div>

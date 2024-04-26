@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Coupon;
+use App\Models\Events;
 use App\Models\Post;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -17,13 +18,15 @@ class HomeController extends Controller
         $recentCoupons = Coupon::latest()->limit(8)->get();
         $popularCoupons = Coupon::latest()->first();
         $recentVideos = Video::latest()->limit(8)->get();
+        $events = Events::latest()->limit(3)->get();
 
         return view("pages.index",compact("latestPosts",
                                          "popularPosts",
                                          "recentPosts",
                                          "recentCoupons",
                                          "popularCoupons",
-                                         "recentVideos"));
+                                         "recentVideos",
+                                        "events"));
     }
 
     public function dashboard()  {

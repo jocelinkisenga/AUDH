@@ -27,7 +27,7 @@ Route::get("/live",[HomeController::class,"live"])->name("live");
 Route::get("article/{id}",[PostController::class,"show"])->name("posts.show");
 Route::get("couponsHome/",[CouponController::class,"index"])->name("coupons.index");
 Route::get("frontPosts",[PostController::class,"front"])->name("posts.front");
-Route::get("events", [EventsController::class, "front"])->name("event.front");
+Route::get("eventsfront", [EventsController::class, "front"])->name("event.front");
 Route::get("missions", [MissionController::class,"index"])->name("missions.index");
 Route::get("contact", [ContactController::class, "index"])->name("contact.index");
 Route::get("about", [AboutController::class, "index"])->name("about.index");

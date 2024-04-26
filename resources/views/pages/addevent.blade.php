@@ -18,7 +18,7 @@
                                    Heure et date
                                 </div>
                                 <div class="col-md-6">
-                                    <input type="datetime-local" name="" id="">
+                                    <input type="datetime-local" name="day_event" id="">
                                 </div>
                             </div>
                             <div class="form-group row">
@@ -31,7 +31,7 @@
                             <div class="form-group row">
                                 <label for="exampleInputEmail2" class="col-sm-3 col-form-label">image</label>
                                 <div class="col-sm-9">
-                                    <input type="file" name="image[]" class="form-control" id="exampleInputEmail2" >
+                                    <input type="file" name="image" class="form-control" id="exampleInputEmail2" >
                                 </div>
                             </div>
                             <div class="form-group row">

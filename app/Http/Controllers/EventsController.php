@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Events;
 use App\Http\Requests\StoreEventsRequest;
 use App\Http\Requests\UpdateEventsRequest;
+use App\Models\Events;
+use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class EventsController extends Controller
 {
@@ -14,6 +16,10 @@ class EventsController extends Controller
     public function index()
     {
         return view("pages.listevents");
+    }
+
+    public function front(){
+        return view("event",["events" => Events::latest()->limit(12)->get()]);
     }
 
     /**
@@ -27,9 +33,20 @@ class EventsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreEventsRequest $request)
+    public function store(Request $request)
     {
-        //
+
+        $imgName = Carbon::now()->timestamp . 'jocelin.' . $request->file('image')->extension();
+        $path = $request->file('image')->storeAs('/storage/uploads', $imgName, 'public');
+
+        Events::create(
+[    'title' => $request->title,
+            'description' => $request->description,
+            'day_event' => $request->day_event,
+            'photo' => $imgName]
+        );
+
+        return redirect()->route("dashboard");
     }
 
     /**
