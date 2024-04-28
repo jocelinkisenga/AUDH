@@ -7,9 +7,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-7 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
-             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">About Us</h1>
-          </div>
+             <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="/">Accueil</a></span> <span>A propos</span></p>
+            <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">A propos de nous</h1>          </div>
         </div>
       </div>
     </div>
@@ -19,18 +18,25 @@
     	<div class="container">
     		<div class="row d-flex">
     			<div class="col-md-6 d-flex ftco-animate">
-    				<div class="img img-about align-self-stretch" style="background-image: url(images/bg_3.jpg); width: 100%;"></div>
+    				<div class="img img-about align-self-stretch" style="background-image: url({{ asset("audh/image8.jpg") }}); width: 100%;"></div>
     			</div>
     			<div class="col-md-6 pl-md-5 ftco-animate">
-    				<h2 class="mb-4">Welcome to Welfare Stablished Since 1898</h2>
-    				<p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-    				<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+    				<h2 class="mb-4">L'Action universelle pour la défense des droits de l'homme</h2>
+    				<p>L'Action universelle pour la défense des droits de l'homme , Audh est une structure internationale des droits de l'homme qui a comme objectifs  , la défense des droits de l'homme,  la dignité humaine,  l'assistance sociale et juridique aux victimes  des violations des droits de l'homme , faire la promotion des droits de l'homme et vulgariser les instruments juridiques relatifs aux droits de l'homme et droits des enfants,  organise régulièrement des visites dans les prisons,  cachots et tout lieu de détention pour faire l'évaluation des droits et libertés garantie par les lois,  observations des élections et autres activités,  organise des formations,  ateliers et conférences pour contribuer à l'état de droit </p>
+                    <p>
+                        L'audh est apolitique et est installé dans plusieurs provinces de la République démocratique du congo et dans d'autres pays du monde
+
+L'audh à un statut international et ouvert à tous et pour être membre il faut répondre à critères et remplir une fiche d'adhésion
+
+Le président national et international de L'AUDH s'appelle M.Benis lubula mwamba  .
+Le siège international de L'AUDH est à Kinshasa sur le numéro 17 de l'avenue nioka,  Quartier UPN,  Commune de NGALIEMA, Kinshasa/ numéro 05 Avenue colonel Ebeya,  commune de la Gombe,  Kinshasa
+                    </p>
     			</div>
     		</div>
     	</div>
     </section>
 
-    <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
+    {{-- <section class="ftco-counter ftco-intro ftco-intro-2" id="section-counter">
     	<div class="container">
     		<div class="row no-gutters">
     			<div class="col-md-5 d-flex justify-content-center counter-wrap ftco-animate">
@@ -97,7 +103,7 @@
         					<div class="text">
 		        				<p>Donated <span>$150</span> for <a href="#">Children Needs Food</a></p>
 		        			</div>
-        				</div> 
+        				</div>
         			</div>
         		</div>
         	</div>
@@ -117,7 +123,7 @@
         	</div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
 
 @endsection
