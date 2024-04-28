@@ -28,7 +28,8 @@
 
 L'audh à un statut international et ouvert à tous et pour être membre il faut répondre à critères et remplir une fiche d'adhésion
 
-Le président national et international de L'AUDH s'appelle M.Benis lubula mwamba  .
+Le président national et international de L'AUDH s'appelle M.Benis lubula mwamba  . <br>
+
 Le siège international de L'AUDH est à Kinshasa sur le numéro 17 de l'avenue nioka,  Quartier UPN,  Commune de NGALIEMA, Kinshasa/ numéro 05 Avenue colonel Ebeya,  commune de la Gombe,  Kinshasa
                     </p>
     			</div>

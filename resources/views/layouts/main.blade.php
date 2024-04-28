@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>@yield("title")</title>
+    <title>@yield("title", "Audh ONG")</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+    <meta name="description" content="Audh est une structure internationale des droits de l'homme">
+    <meta name="keywords" content="droit, homme, justice, deprimé">
+    <meta name="author" content="Jocelin kisenga">
     <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
 
